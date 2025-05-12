@@ -5,6 +5,9 @@ body {
   background-size: cover;
   color: #fff;
   background-color: black;
+  background-size: 100%;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .page-wrapper {
@@ -36,7 +39,6 @@ body {
   transform: scale(0.61);
   transform-origin: top center;
   margin-top: 10px;
-  margin-bottom: -80px;
 }
 
 .poster-swiper .swiper-slide img {
@@ -132,6 +134,22 @@ body {
   padding: 0 !important;
 }
 
+.swal2-popup .swal2-close {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  padding: 8px;
+  width: 32px;
+  height: 32px;
+  line-height: 16px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  top: 8px;
+  right: 8px;
+  position: absolute;
+  z-index: 10000;
+}
+
 @media screen and (max-height: 667px) {
   body {
     height: 100vh;
@@ -146,7 +164,7 @@ body {
   }
 
   .poster-swiper {
-    transform: scale(0.65);
+    transform: scale(0.65) translateX(9px);
     margin-bottom: -60px;
   }
 
