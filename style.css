@@ -3,10 +3,11 @@ body {
   padding: 0;
   font-family: "Helvetica Neue", sans-serif;
   background: url('image/background02.png') no-repeat center center fixed;
-  background-size: cover;
+  background-size: 100% 100%;
   background-color: black;
   color: #fff;
   width: 100vw;
+  min-width: 100vw;
   overflow-x: hidden;
   position: relative;
 }
@@ -16,6 +17,8 @@ body {
   overflow: visible;
   transform: none;
   max-width: 375px;
+  width: 100%;
+  min-width: 100vw;
   margin: 0 auto;
 }
 
@@ -29,7 +32,7 @@ body {
   position: relative;
   width: 100%;
   margin-top: -1.5vh;
-  margin-bottom: -26vh;  
+  margin-bottom: -26vh;
   overflow: visible;
 }
 
@@ -95,7 +98,7 @@ body {
 }
 
 .reward-note {
-  font-size: 10px;
+  font-size: 13px;
   color: #ddd;
 }
 
@@ -104,7 +107,7 @@ body {
   bottom: 270px;
   right: 8px;
   z-index: 4;
-  width: 110px;
+  width: 90px;
   height: auto;
 }
 
@@ -151,25 +154,35 @@ body {
   z-index: 10000;
 }
 
+/* 🔧 iOS 補丁 */
+@supports (-webkit-touch-callout: none) {
+  body {
+    background-size: 100% 100% !important;
+  }
+}
+
+/* 🔧 Media Query for small screens */
 @media screen and (max-height: 667px) {
   body {
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
     background: url('image/background02.png') no-repeat center center fixed;
-    background-size: cover;
+    background-size: 100% 100%;
     background-color: black;
     position: relative;
+    min-width: 100vw;
   }
 
   .page-wrapper {
     transform: scale(0.9);
     transform-origin: top center;
-    padding-bottom: 16px; 
+    padding-bottom: 16px;
+    min-width: 100vw;
   }
 
   .poster-swiper {
-    transform: scale(0.65) translateX(12px); /* 右移 */
+    transform: scale(0.65) translateX(12px);
     margin-bottom: -60px;
   }
 
@@ -208,7 +221,7 @@ body {
     width: 100px;
     height: auto;
   }
-  
+
   .classic-btn img {
     width: 100%;
     display: block;
@@ -220,13 +233,13 @@ body {
     justify-content: center;
     align-items: center;
   }
-  
+
   .video-iframe {
     width: 80vw;
     height: 60vh;
     border: none;
   }
-  
+
   .swal2-popup.coupon-popup {
     max-width: 100vw;
     padding: 0;
