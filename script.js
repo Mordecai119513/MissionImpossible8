@@ -64,7 +64,7 @@ function submitPhone() {
   Swal.fire({
     html: `
     <div class="coupon-container">
-      <img src="image/coupon.png" alt="優惠圖片" class="coupon-image" />
+      <img src="image/coupon.jpg" alt="優惠圖片" class="coupon-image" />
     </div>
   `,
     showConfirmButton: false,
