@@ -60,7 +60,7 @@ body {
 }
 
 .content {
-  padding: 16px 16px;
+  padding:16px;
   text-align: center;
   background: transparent;
   margin-top: -32px;
@@ -200,7 +200,6 @@ body {
     transform-origin: top center;
     position: relative;
     margin-top: -36px;
-    padding: 12px 16px;
   }
 
   .reward-note {
