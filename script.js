@@ -105,7 +105,7 @@ function showVideoPopup() {
   Swal.fire({
     html: `
       <button type="button" class="swal2-close" aria-label="Close" style="z-index:10000;"></button>
-      <div id="player-container" style="position:relative;width:100vw;height:90vh;">
+      <div id="player-container" style="position:relative;width:100vw;height:70vh;">
         <div id="yt-player" style="position:absolute;top:0;left:0;width:100%;height:100%;"></div>
       </div>
     `,

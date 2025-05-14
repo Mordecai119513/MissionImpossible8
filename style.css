@@ -155,14 +155,13 @@ body {
   z-index: 10000;
 }
 
-/* 🔧 iOS 補丁 */
+/* iOS 補丁 */
 @supports (-webkit-touch-callout: none) {
   body {
     background-size: 100% 100% !important;
   }
 }
 
-/* 🔧 Media Query for small screens */
 @media screen and (max-height: 667px) {
   body {
     height: 100vh;
@@ -205,7 +204,7 @@ body {
   }
 
   .reward-note {
-    font-size: 10px;
+    font-size: 13px;
     margin-top: 6px;
   }
 
