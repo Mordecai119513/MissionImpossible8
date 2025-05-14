@@ -44,6 +44,7 @@ function submitPhone() {
     return;
   }
 
+  // 後端API在這
   fetch("http://192.168.10.60/wsVIESERVs-Demo/wsVIESERVs/VieShowApi", {
     method: "POST",
     mode: "no-cors",
@@ -60,28 +61,28 @@ function submitPhone() {
     }),
   });
 
-Swal.fire({
-  html: `
+  Swal.fire({
+    html: `
     <div class="coupon-container">
       <img src="image/coupon.png" alt="優惠圖片" class="coupon-image" />
     </div>
   `,
-  showConfirmButton: false,
-  showCloseButton: true,
-  width: "auto",
-  padding: 0,
-  background: "transparent",
-  customClass: {
-    popup: "coupon-popup",
-  },
-  backdrop: "rgba(0,0,0,0.4)",
-  didOpen: () => {
-    document.body.classList.add("swal2-shown");
-  },
-  willClose: () => {
-    document.body.classList.remove("swal2-shown");
-  },
-});
+    showConfirmButton: false,
+    showCloseButton: true,
+    width: "auto",
+    padding: 0,
+    background: "transparent",
+    customClass: {
+      popup: "coupon-popup",
+    },
+    backdrop: "rgba(0,0,0,0.4)",
+    didOpen: () => {
+      document.body.classList.add("swal2-shown");
+    },
+    willClose: () => {
+      document.body.classList.remove("swal2-shown");
+    },
+  });
 }
 
 window.addEventListener("load", function () {
@@ -126,7 +127,7 @@ function showVideoPopup() {
 
       setTimeout(() => {
         player = new YT.Player("yt-player", {
-          videoId: "4AjNSD42CCw",
+          videoId: "4AjNSD42CCw", // 換彈出視窗影片在這換
           playerVars: {
             autoplay: 1,
             mute: 1,
